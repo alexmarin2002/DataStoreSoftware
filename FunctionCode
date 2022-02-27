@@ -1,0 +1,958 @@
+#include <fmx.h>
+#pragma hdrstop
+ #include <iostream>
+#include <fstream>
+#include <string>
+#include "Unit1.h"
+#include <windows.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+
+TTBase *TBase;
+//---------------------------------------------------------------------------
+__fastcall TTBase::TTBase(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TTBase::Button1Click(TObject *Sender)
+{
+
+	 AnsiString nomeFile1;
+nomeFile1=BestellNr1->Text+Arbeitsgang1->Text+TeileNummer1->Text+".txt";
+	 ofstream myFile(ios::app);
+	AnsiString Bezeichnung0;
+	AnsiString StuckzahlAuftrag0;
+	AnsiString TeileNummer0;
+	AnsiString LieferTermin0;
+	AnsiString Kunde0;
+	AnsiString BestellNr0;
+	AnsiString GutMenge0;
+	AnsiString Guttot;
+	AnsiString AAtot;
+	AnsiString MAtot;
+	AnsiString Arbeitsgang0[200];
+	AnsiString Name0[200];
+	AnsiString Datum0[200];
+	AnsiString ZeitV0[200];
+	AnsiString ZeitB0[200];
+	AnsiString Pause0[200];
+	AnsiString Stunden0[200];
+	AnsiString Maschine0[200];
+	AnsiString Gut0[200];
+	AnsiString AA0[200];
+	AnsiString MA0[200];
+	AnsiString Mes0[200];
+	AnsiString Bem0[200];
+	myFile.open(nomeFile1.c_str(), ios::app);
+	if(myFile.is_open) {
+	//----------------------------------------------------------------
+		   //1. Line
+		   Name0[1] = Name1->Text;
+		   Datum0[1] = Datum1->Text;
+		   ZeitV0[1] = ZeitV1->Text+":"+ZeitV1q->Text;
+		   ZeitB0[1] = ZeitB1->Text+":"+ZeitB1q->Text;
+		   Pause0[1] = Pause1->Text;
+		   Stunden0[1] = Stunden1->Text;
+		   Maschine0[1] = Maschine1->Text;
+		   Arbeitsgang0[1] = Arbeitsgang1->Text;
+		   Gut0[1] = Gut1->Text;
+		   AA0[1] = AA1->Text;
+		   MA0[1] = MA1->Text;
+		   Mes0[1] = Mes1->Text;
+		   Bem0[1] = Bem1->Text;
+		   Bezeichnung0 = Bezeichnung1->Text;
+		   LieferTermin0 = LieferTermin1->Text;
+		   StuckzahlAuftrag0 = StuckzahlAuftrag1->Text;
+		   TeileNummer0 = TeileNummer1->Text;
+		   Kunde0 = Kunde1->Text;
+		   BestellNr0 = BestellNr1->Text;
+		   GutMenge0 = GutMenge1->Text;
+		   Guttot = GutCalculator00->Text;
+		   AAtot = AACalculator00->Text;
+		   MAtot = MACalculator00->Text;
+
+		   myFile<<"*       Bezeichnung: " <<Bezeichnung0 <<std::endl;
+		   myFile<<"* Stückzahl Auftrag: " <<StuckzahlAuftrag0 <<std::endl;
+		   myFile<<"*          Teile-Nr: " <<TeileNummer0 <<std::endl;
+		   myFile<<"*      LieferTermin: " <<LieferTermin0 <<std::endl;
+		   myFile<<"*             Kunde: " <<Kunde0 <<std::endl;
+		   myFile<<"*        Bestell-Nr: " <<BestellNr0 <<std::endl;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"1. Name Mitarbeiter: " <<Name0[1] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[1] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[1] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[1] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[1] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[1] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[1] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[1] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[1] <<std::endl;
+		   myFile<<"                 AA: " << AA0[1] <<std::endl;
+		   myFile<<"                 MA: " << MA0[1] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[1] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[1] <<std::endl;
+		   Name1->Text = "";
+		   Datum1->Text= "";
+		   ZeitV1->Text= "";
+		   ZeitB1->Text= "";
+		   ZeitV1q->Text= "";
+		   ZeitB1q->Text= "";
+		   Pause1->Text= "";
+		   Stunden1->Text= "";
+		   Maschine1->Text= "";
+		   Arbeitsgang1->Text= "";
+		   Gut1->Text= "";
+		   AA1->Text= "";
+		   MA1->Text= "";
+		   Mes1->Text= "";
+		   Bem1->Text= "";
+		   //----------------------------------------------------------------
+		   //2. Line
+		   Name0[2] = Name2->Text;
+		   Datum0[2] = Datum2->Text;
+		   ZeitV0[2] = ZeitV2->Text+":"+ZeitV2q->Text;
+		   ZeitB0[2] = ZeitB2->Text+":"+ZeitB2q->Text;
+		   Pause0[2] = Pause2->Text;
+		   Stunden0[2] = Stunden2->Text;
+		   Maschine0[2] = Maschine2->Text;
+		   Arbeitsgang0[2] = Arbeitsgang2->Text;
+		   Gut0[2] = Gut2->Text;
+		   AA0[2] = AA2->Text;
+		   MA0[2] = MA2->Text;
+		   Mes0[2] = Mes2->Text;
+		   Bem0[2] = Bem2->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"2. Name Mitarbeiter: " <<Name0[2] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[2] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[2] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[2] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[2] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[2] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[2] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[2] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[2] <<std::endl;
+		   myFile<<"                 AA: " << AA0[2] <<std::endl;
+		   myFile<<"                 MA: " << MA0[2] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[2] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[2] <<std::endl;
+		   Name2->Text = "";
+		   Datum2->Text= "";
+		   ZeitV2->Text= "";
+		   ZeitB2->Text= "";
+		   ZeitV2q->Text= "";
+		   ZeitB2q->Text= "";
+		   Pause2->Text= "";
+		   Stunden2->Text= "";
+		   Maschine2->Text= "";
+		   Arbeitsgang2->Text= "";
+		   Gut2->Text= "";
+		   AA2->Text= "";
+		   MA2->Text= "";
+		   Mes2->Text= "";
+		   Bem2->Text= "";
+           //----------------------------------------------------------------
+		   //3. Line
+		   Name0[3] = Name3->Text;
+		   Datum0[3] = Datum3->Text;
+		   ZeitV0[3] = ZeitV3->Text+":"+ZeitV3q->Text;
+		   ZeitB0[3] = ZeitB3->Text+":"+ZeitB3q->Text;
+		   Pause0[3] = Pause3->Text;
+		   Stunden0[3] = Stunden3->Text;
+		   Maschine0[3] = Maschine3->Text;
+		   Arbeitsgang0[3] = Arbeitsgang3->Text;
+		   Gut0[3] = Gut3->Text;
+		   AA0[3] = AA3->Text;
+		   MA0[3] = MA3->Text;
+		   Mes0[3] = Mes3->Text;
+		   Bem0[3] = Bem3->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"3. Name Mitarbeiter: " <<Name0[3] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[3] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[3] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[3] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[3] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[3] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[3] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[3] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[3] <<std::endl;
+		   myFile<<"                 AA: " << AA0[3] <<std::endl;
+		   myFile<<"                 MA: " << MA0[3] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[3] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[3] <<std::endl;
+		   Name3->Text = "";
+		   Datum3->Text= "";
+		   ZeitV3->Text= "";
+		   ZeitB3->Text= "";
+		   ZeitV3q->Text= "";
+		   ZeitB3q->Text= "";
+		   Pause3->Text= "";
+		   Stunden3->Text= "";
+		   Maschine3->Text= "";
+		   Arbeitsgang3->Text= "";
+		   Gut3->Text= "";
+		   AA3->Text= "";
+		   MA3->Text= "";
+		   Mes3->Text= "";
+		   Bem3->Text= "";
+           //----------------------------------------------------------------
+		   //4. Line
+		   Name0[4] = Name4->Text;
+		   Datum0[4] = Datum4->Text;
+		   ZeitV0[4] = ZeitV4->Text+":"+ZeitV4q->Text;
+		   ZeitB0[4] = ZeitB4->Text+":"+ZeitB4q->Text;
+		   Pause0[4] = Pause4->Text;
+		   Stunden0[4] = Stunden4->Text;
+		   Maschine0[4] = Maschine4->Text;
+		   Arbeitsgang0[4] = Arbeitsgang4->Text;
+		   Gut0[4] = Gut4->Text;
+		   AA0[4] = AA4->Text;
+		   MA0[4] = MA4->Text;
+		   Mes0[4] = Mes4->Text;
+		   Bem0[4] = Bem4->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"4. Name Mitarbeiter: " <<Name0[4] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[4] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[4] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[4] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[4] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[4] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[4] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[4] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[4] <<std::endl;
+		   myFile<<"                 AA: " << AA0[4] <<std::endl;
+		   myFile<<"                 MA: " << MA0[4] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[4] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[4] <<std::endl;
+		   Name4->Text = "";
+		   Datum4->Text= "";
+		   ZeitV4->Text= "";
+		   ZeitB4->Text= "";
+		   ZeitV4q->Text= "";
+		   ZeitB4q->Text= "";
+		   Pause4->Text= "";
+		   Stunden4->Text= "";
+		   Maschine4->Text= "";
+		   Arbeitsgang4->Text= "";
+		   Gut4->Text= "";
+		   AA4->Text= "";
+		   MA4->Text= "";
+		   Mes4->Text= "";
+		   Bem4->Text= "";
+           //----------------------------------------------------------------
+		   //5. Line
+		   Name0[5] = Name5->Text;
+		   Datum0[5] = Datum5->Text;
+		   ZeitV0[5] = ZeitV5->Text+":"+ZeitV5q->Text;
+		   ZeitB0[5] = ZeitB5->Text+":"+ZeitB5q->Text;
+		   Pause0[5] = Pause5->Text;
+		   Stunden0[5] = Stunden5->Text;
+		   Maschine0[5] = Maschine5->Text;
+		   Arbeitsgang0[5] = Arbeitsgang5->Text;
+		   Gut0[5] = Gut5->Text;
+		   AA0[5] = AA5->Text;
+		   MA0[5] = MA5->Text;
+		   Mes0[5] = Mes5->Text;
+		   Bem0[5] = Bem5->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"5. Name Mitarbeiter: " <<Name0[5] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[5] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[5] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[5] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[5] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[5] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[5] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[5] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[5] <<std::endl;
+		   myFile<<"                 AA: " << AA0[5] <<std::endl;
+		   myFile<<"                 MA: " << MA0[5] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[5] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[5] <<std::endl;
+		   Name5->Text = "";
+		   Datum5->Text= "";
+		   ZeitV5->Text= "";
+		   ZeitB5->Text= "";
+		   ZeitV5q->Text= "";
+		   ZeitB5q->Text= "";
+		   Pause5->Text= "";
+		   Stunden5->Text= "";
+		   Maschine5->Text= "";
+		   Arbeitsgang5->Text= "";
+		   Gut5->Text= "";
+		   AA5->Text= "";
+		   MA5->Text= "";
+		   Mes5->Text= "";
+		   Bem5->Text= "";
+           //----------------------------------------------------------------
+		   //6. Line
+		   Name0[6] = Name6->Text;
+		   Datum0[6] = Datum6->Text;
+		   ZeitV0[6] = ZeitV6->Text+":"+ZeitV6q->Text;
+		   ZeitB0[6] = ZeitB6->Text+":"+ZeitB6q->Text;
+		   Pause0[6] = Pause6->Text;
+		   Stunden0[6] = Stunden6->Text;
+		   Maschine0[6] = Maschine6->Text;
+		   Arbeitsgang0[6] = Arbeitsgang6->Text;
+		   Gut0[6] = Gut6->Text;
+		   AA0[6] = AA6->Text;
+		   MA0[6] = MA6->Text;
+		   Mes0[6] = Mes6->Text;
+		   Bem0[6] = Bem6->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"6. Name Mitarbeiter: " <<Name0[6] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[6] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[6] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[6] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[6] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[6] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[6] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[6] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[6] <<std::endl;
+		   myFile<<"                 AA: " << AA0[6] <<std::endl;
+		   myFile<<"                 MA: " << MA0[6] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[6] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[6] <<std::endl;
+		   Name6->Text = "";
+		   Datum6->Text= "";
+		   ZeitV6->Text= "";
+		   ZeitB6->Text= "";
+		   ZeitV6q->Text= "";
+		   ZeitB6q->Text= "";
+		   Pause6->Text= "";
+		   Stunden6->Text= "";
+		   Maschine6->Text= "";
+		   Arbeitsgang6->Text= "";
+		   Gut6->Text= "";
+		   AA6->Text= "";
+		   MA6->Text= "";
+		   Mes6->Text= "";
+		   Bem6->Text= "";
+           //----------------------------------------------------------------
+		   //7. Line
+		   Name0[7] = Name7->Text;
+		   Datum0[7] = Datum7->Text;
+		   ZeitV0[7] = ZeitV7->Text+":"+ZeitV7q->Text;
+		   ZeitB0[7] = ZeitB7->Text+":"+ZeitB7q->Text;
+		   Pause0[7] = Pause7->Text;
+		   Stunden0[7] = Stunden7->Text;
+		   Maschine0[7] = Maschine7->Text;
+		   Arbeitsgang0[7] = Arbeitsgang7->Text;
+		   Gut0[7] = Gut7->Text;
+		   AA0[7] = AA7->Text;
+		   MA0[7] = MA7->Text;
+		   Mes0[7] = Mes7->Text;
+		   Bem0[7] = Bem7->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"7. Name Mitarbeiter: " <<Name0[7] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[7] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[7] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[7] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[7] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[7] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[7] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[7] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[7] <<std::endl;
+		   myFile<<"                 AA: " << AA0[7] <<std::endl;
+		   myFile<<"                 MA: " << MA0[7] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[7] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[7] <<std::endl;
+		   Name7->Text = "";
+		   Datum7->Text= "";
+		   ZeitV7->Text= "";
+		   ZeitB7->Text= "";
+		   ZeitV7q->Text= "";
+		   ZeitB7q->Text= "";
+		   Pause7->Text= "";
+		   Stunden7->Text= "";
+		   Maschine7->Text= "";
+		   Arbeitsgang7->Text= "";
+		   Gut7->Text= "";
+		   AA7->Text= "";
+		   MA7->Text= "";
+		   Mes7->Text= "";
+		   Bem7->Text= "";
+           //----------------------------------------------------------------
+		   //8. Line
+		   Name0[8] = Name8->Text;
+		   Datum0[8] = Datum8->Text;
+		   ZeitV0[8] = ZeitV8->Text+":"+ZeitV8q->Text;
+		   ZeitB0[8] = ZeitB8->Text+":"+ZeitB8q->Text;
+		   Pause0[8] = Pause8->Text;
+		   Stunden0[8] = Stunden8->Text;
+		   Maschine0[8] = Maschine8->Text;
+		   Arbeitsgang0[8] = Arbeitsgang8->Text;
+		   Gut0[8] = Gut8->Text;
+		   AA0[8] = AA8->Text;
+		   MA0[8] = MA8->Text;
+		   Mes0[8] = Mes8->Text;
+		   Bem0[8] = Bem8->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"8. Name Mitarbeiter: " <<Name0[8] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[8] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[8] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[8] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[8] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[8] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[8] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[8] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[8] <<std::endl;
+		   myFile<<"                 AA: " << AA0[8] <<std::endl;
+		   myFile<<"                 MA: " << MA0[8] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[8] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[8] <<std::endl;
+		   Name8->Text = "";
+		   Datum8->Text= "";
+		   ZeitV8->Text= "";
+		   ZeitB8->Text= "";
+		   ZeitV8q->Text= "";
+		   ZeitB8q->Text= "";
+		   Pause8->Text= "";
+		   Stunden8->Text= "";
+		   Maschine8->Text= "";
+		   Arbeitsgang8->Text= "";
+		   Gut8->Text= "";
+		   AA8->Text= "";
+		   MA8->Text= "";
+		   Mes8->Text= "";
+		   Bem8->Text= "";
+           //----------------------------------------------------------------
+		   //9. Line
+		   Name0[9] = Name9->Text;
+		   Datum0[9] = Datum9->Text;
+		   ZeitV0[9] = ZeitV9->Text+":"+ZeitV9q->Text;
+		   ZeitB0[9] = ZeitB9->Text+":"+ZeitB9q->Text;
+		   Pause0[9] = Pause9->Text;
+		   Stunden0[9] = Stunden9->Text;
+		   Maschine0[9] = Maschine9->Text;
+		   Arbeitsgang0[9] = Arbeitsgang9->Text;
+		   Gut0[9] = Gut9->Text;
+		   AA0[9] = AA9->Text;
+		   MA0[9] = MA9->Text;
+		   Mes0[9] = Mes9->Text;
+		   Bem0[9] = Bem9->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"9 Name Mitarbeiter: " <<Name0[9] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[9] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[9] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[9] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[9] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[9] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[9] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[9] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[9] <<std::endl;
+		   myFile<<"                 AA: " << AA0[9] <<std::endl;
+		   myFile<<"                 MA: " << MA0[9] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[9] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[9] <<std::endl;
+		   Name9->Text = "";
+		   Datum9->Text= "";
+		   ZeitV9->Text= "";
+		   ZeitB9->Text= "";
+		   ZeitV9q->Text= "";
+		   ZeitB9q->Text= "";
+		   Pause9->Text= "";
+		   Stunden9->Text= "";
+		   Maschine9->Text= "";
+		   Arbeitsgang9->Text= "";
+		   Gut9->Text= "";
+		   AA9->Text= "";
+		   MA9->Text= "";
+		   Mes9->Text= "";
+		   Bem9->Text= "";
+           //----------------------------------------------------------------
+		   //10. Line
+		   Name0[10] = Name10->Text;
+		   Datum0[10] = Datum10->Text;
+		   ZeitV0[10] = ZeitV10->Text+":"+ZeitV10q->Text;
+		   ZeitB0[10] = ZeitB10->Text+":"+ZeitB10q->Text;
+		   Pause0[10] = Pause10->Text;
+		   Stunden0[10] = Stunden10->Text;
+		   Maschine0[10] = Maschine10->Text;
+		   Arbeitsgang0[10] = Arbeitsgang10->Text;
+		   Gut0[10] = Gut10->Text;
+		   AA0[10] = AA10->Text;
+		   MA0[10] = MA10->Text;
+		   Mes0[10] = Mes10->Text;
+		   Bem0[10] = Bem10->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"10. Name Mitarbeiter: " <<Name0[10] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[10] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[10] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[10] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[10] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[10] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[10] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[10] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[10] <<std::endl;
+		   myFile<<"                 AA: " << AA0[10] <<std::endl;
+		   myFile<<"                 MA: " << MA0[10] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[10] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[10] <<std::endl;
+		   Name10->Text = "";
+		   Datum10->Text= "";
+		   ZeitV10->Text= "";
+		   ZeitB10->Text= "";
+		   ZeitV10q->Text= "";
+		   ZeitB10q->Text= "";
+		   Pause10->Text= "";
+		   Stunden10->Text= "";
+		   Maschine10->Text= "";
+		   Arbeitsgang10->Text= "";
+		   Gut10->Text= "";
+		   AA10->Text= "";
+		   MA10->Text= "";
+		   Mes10->Text= "";
+		   Bem10->Text= "";
+           //----------------------------------------------------------------
+		   //11. Line
+		   Name0[11] = Name11->Text;
+		   Datum0[11] = Datum11->Text;
+		   ZeitV0[11] = ZeitV11->Text+":"+ZeitV11q->Text;
+		   ZeitB0[11] = ZeitB11->Text+":"+ZeitB11q->Text;
+		   Pause0[11] = Pause11->Text;
+		   Stunden0[11] = Stunden11->Text;
+		   Maschine0[11] = Maschine11->Text;
+		   Arbeitsgang0[11] = Arbeitsgang11->Text;
+		   Gut0[11] = Gut11->Text;
+		   AA0[11] = AA11->Text;
+		   MA0[11] = MA11->Text;
+		   Mes0[11] = Mes11->Text;
+		   Bem0[11] = Bem11->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"11. Name Mitarbeiter: " <<Name0[11] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[11] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[11] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[11] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[11] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[11] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[11] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[11] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[11] <<std::endl;
+		   myFile<<"                 AA: " << AA0[11] <<std::endl;
+		   myFile<<"                 MA: " << MA0[11] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[11] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[11] <<std::endl;
+		   Name11->Text = "";
+		   Datum11->Text= "";
+		   ZeitV11->Text= "";
+		   ZeitB11->Text= "";
+		   ZeitV11q->Text= "";
+		   ZeitB11q->Text= "";
+		   Pause11->Text= "";
+		   Stunden11->Text= "";
+		   Maschine11->Text= "";
+		   Arbeitsgang11->Text= "";
+		   Gut11->Text= "";
+		   AA11->Text= "";
+		   MA11->Text= "";
+		   Mes11->Text= "";
+		   Bem11->Text= "";
+           //----------------------------------------------------------------
+		   //12. Line
+		   Name0[12] = Name12->Text;
+		   Datum0[12] = Datum12->Text;
+		   ZeitV0[12] = ZeitV12->Text+":"+ZeitV12q->Text;
+		   ZeitB0[12] = ZeitB12->Text+":"+ZeitB12q->Text;
+		   Pause0[12] = Pause11->Text;
+		   Stunden0[12] = Stunden12->Text;
+		   Maschine0[12] = Maschine12->Text;
+		   Arbeitsgang0[12] = Arbeitsgang12->Text;
+		   Gut0[12] = Gut12->Text;
+		   AA0[12] = AA12->Text;
+		   MA0[12] = MA12->Text;
+		   Mes0[12] = Mes12->Text;
+		   Bem0[12] = Bem12->Text;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"12. Name Mitarbeiter: " <<Name0[12] <<std::endl;
+		   myFile<<"              Datum: " << Datum0[12] <<std::endl;
+		   myFile<<"           Zeit von: " << ZeitV0[12] <<std::endl;
+		   myFile<<"           Zeit bis: " << ZeitB0[12] <<std::endl;
+		   myFile<<"      Pause minuten: " << Pause0[12] <<std::endl;
+		   myFile<<"            Stunden: " << Stunden0[12] <<std::endl;
+		   myFile<<"           Maschine: " << Maschine0[12] <<std::endl;
+		   myFile<<"    Arbeitsgang AFO: " << Arbeitsgang0[12] <<std::endl;
+		   myFile<<"                Gut: " << Gut0[12] <<std::endl;
+		   myFile<<"                 AA: " << AA0[12] <<std::endl;
+		   myFile<<"                 MA: " << MA0[12] <<std::endl;
+		   myFile<<"          Messungen: " << Mes0[12] <<std::endl;
+		   myFile<<"          Bemerkung: " << Bem0[12] <<std::endl;
+		   myFile<<"---------------------------------------" <<std::endl;
+		   myFile<<"          Gut-Menge: " << GutMenge0<<std::endl;
+		   myFile<<"            Gut tot: " << Guttot <<std::endl;
+		   myFile<<"             AA tot: " << AAtot <<std::endl;
+		   myFile<<"             MA tot: " << MAtot <<std::endl;
+		   Name12->Text = "";
+		   Datum12->Text= "";
+		   ZeitV12->Text= "";
+		   ZeitB12->Text= "";
+		   ZeitV12q->Text= "";
+		   ZeitB12q->Text= "";
+		   Pause12->Text= "";
+		   Stunden12->Text= "";
+		   Maschine12->Text= "";
+		   Arbeitsgang12->Text= "";
+		   Gut12->Text= "";
+		   AA12->Text= "";
+		   MA12->Text= "";
+		   Mes12->Text= "";
+		   Bem12->Text= "";
+		   GutMenge1->Text="";
+		   GutCalculator00->Text="";
+		   AACalculator00->Text="";
+		   MACalculator00->Text="";
+		   Bezeichnung1->Text="";
+		   StuckzahlAuftrag1->Text="";
+		   TeileNummer1->Text="";
+		   LieferTermin1->Text="";
+		   Kunde1->Text="";
+		   BestellNr1->Text="";
+		   oldNameFile->Text = nomeFile1;
+		   myFile.close();
+
+
+
+
+	}
+	else{
+		  oldNameFile->Text = "YOU DIDN'T SAVE THE FILE!, CLOSE IT AND TRY AGAIN";
+	}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TTBase::ButtonCalculator2Click(TObject *Sender)
+{      //GutCalculator
+   int Gut[20];
+   if(Gut1->Text == ""){
+	  Gut1->Text= 0;
+	  Gut[1]=StrToInt(Gut1->Text);
+	  Gut1->Text= "";
+   }
+   else{
+		Gut[1]=StrToInt(Gut1->Text);
+   }
+   if(Gut2->Text == ""){
+	  Gut2->Text= 0;
+	  Gut[2]=StrToInt(Gut2->Text);
+	  Gut2->Text= "";
+   }
+   else{
+		Gut[2]=StrToInt(Gut2->Text);
+   }
+   if(Gut3->Text == ""){
+	  Gut3->Text= 0;
+	  Gut[3]=StrToInt(Gut3->Text);
+	  Gut3->Text= "";
+   }
+   else{
+		Gut[3]=StrToInt(Gut3->Text);
+   }
+   if(Gut4->Text == ""){
+	  Gut4->Text= 0;
+	  Gut[4]=StrToInt(Gut4->Text);
+	  Gut4->Text= "";
+   }
+   else{
+		Gut[4]=StrToInt(Gut4->Text);
+   }
+   if(Gut5->Text == ""){
+	  Gut5->Text= 0;
+	  Gut[5]=StrToInt(Gut5->Text);
+	  Gut5->Text= "";
+   }
+   else{
+		Gut[5]=StrToInt(Gut5->Text);
+   }
+   if(Gut6->Text == ""){
+	  Gut6->Text= 0;
+	  Gut[6]=StrToInt(Gut6->Text);
+	  Gut6->Text= "";
+   }
+   else{
+		Gut[6]=StrToInt(Gut6->Text);
+   }
+   if(Gut7->Text == ""){
+	  Gut7->Text= 0;
+	  Gut[7]=StrToInt(Gut7->Text);
+	  Gut7->Text= "";
+   }
+   else{
+		Gut[7]=StrToInt(Gut7->Text);
+   }
+   if(Gut8->Text == ""){
+	  Gut8->Text= 0;
+	  Gut[8]=StrToInt(Gut8->Text);
+	  Gut8->Text= "";
+   }
+   else{
+		Gut[8]=StrToInt(Gut8->Text);
+   }
+   if(Gut9->Text == ""){
+	  Gut9->Text= 0;
+	  Gut[9]=StrToInt(Gut9->Text);
+	  Gut9->Text= "";
+   }
+   else{
+		Gut[9]=StrToInt(Gut9->Text);
+   }
+   if(Gut10->Text == ""){
+	  Gut10->Text= 0;
+	  Gut[10]=StrToInt(Gut10->Text);
+	  Gut10->Text= "";
+   }
+   else{
+		Gut[10]=StrToInt(Gut10->Text);
+   }
+   if(Gut11->Text == ""){
+	  Gut11->Text= 0;
+	  Gut[11]=StrToInt(Gut11->Text);
+	  Gut11->Text= "";
+   }
+   else{
+		Gut[11]=StrToInt(Gut11->Text);
+   }
+   if(Gut12->Text == ""){
+	  Gut12->Text= 0;
+	  Gut[12]=StrToInt(Gut12->Text);
+	  Gut12->Text= "";
+   }
+   else{
+		Gut[12]=StrToInt(Gut12->Text);
+   }
+   GutCalculator00->Text=Gut[1]+Gut[2]+Gut[3]+Gut[4]+Gut[5]+Gut[6]+Gut[7]+Gut[8]+Gut[9]+Gut[10]+Gut[11]+Gut[12];
+   if(  GutCalculator00->Text==0){
+	  GutCalculator00->Text="";
+   }
+   //--------------------------------------------------------------------------
+   //AA Calculator
+
+	int AA[20];
+
+   if(AA1->Text == ""){
+	  AA1->Text= 0;
+	  AA[1]=StrToInt(AA1->Text);
+	  AA1->Text= "";
+   }
+   else{
+		AA[1]=StrToInt(AA1->Text);
+   }
+   if(AA2->Text == ""){
+	  AA2->Text= 0;
+	  AA[2]=StrToInt(AA2->Text);
+	  AA2->Text= "";
+   }
+   else{
+		AA[2]=StrToInt(AA2->Text);
+   }
+   if(AA3->Text == ""){
+	  AA3->Text= 0;
+	  AA[3]=StrToInt(AA3->Text);
+	  AA3->Text= "";
+   }
+   else{
+		AA[3]=StrToInt(AA3->Text);
+   }
+   if(AA4->Text == ""){
+	  AA4->Text= 0;
+	  AA[4]=StrToInt(AA4->Text);
+	  AA4->Text= "";
+   }
+   else{
+		AA[4]=StrToInt(AA4->Text);
+   }
+   if(AA5->Text == ""){
+	  AA5->Text= 0;
+	  AA[5]=StrToInt(AA5->Text);
+	  AA5->Text= "";
+   }
+   else{
+		AA[5]=StrToInt(AA5->Text);
+   }
+   if(AA6->Text == ""){
+	  AA6->Text= 0;
+	  AA[6]=StrToInt(AA6->Text);
+	  AA6->Text= "";
+   }
+   else{
+		AA[6]=StrToInt(AA6->Text);
+   }
+   if(AA7->Text == ""){
+	  AA7->Text= 0;
+	  AA[7]=StrToInt(AA7->Text);
+	  AA7->Text= "";
+   }
+   else{
+		AA[7]=StrToInt(AA7->Text);
+   }
+   if(AA8->Text == ""){
+	  AA8->Text= 0;
+	  AA[8]=StrToInt(AA8->Text);
+	  AA8->Text= "";
+   }
+   else{
+		AA[8]=StrToInt(AA8->Text);
+   }
+   if(AA9->Text == ""){
+	  AA9->Text= 0;
+	  AA[9]=StrToInt(AA9->Text);
+	  AA9->Text= "";
+   }
+   else{
+		AA[9]=StrToInt(AA9->Text);
+   }
+   if(AA9->Text == ""){
+	  AA9->Text= 0;
+	  AA[9]=StrToInt(AA9->Text);
+	  AA9->Text= "";
+   }
+   else{
+		AA[9]=StrToInt(AA9->Text);
+   }
+   if(AA10->Text == ""){
+	  AA10->Text= 0;
+	  AA[10]=StrToInt(AA10->Text);
+	  AA10->Text= "";
+   }
+   else{
+		AA[10]=StrToInt(AA10->Text);
+   }
+   if(AA11->Text == ""){
+	  AA11->Text= 0;
+	  AA[11]=StrToInt(AA11->Text);
+	  AA11->Text= "";
+   }
+   else{
+		AA[11]=StrToInt(AA11->Text);
+   }
+
+   if(AA12->Text == ""){
+	  AA12->Text= 0;
+	  AA[12]=StrToInt(AA12->Text);
+	  AA12->Text= "";
+   }
+   else{
+		AA[12]=StrToInt(AA12->Text);
+   }
+   AACalculator00->Text=AA[1]+AA[2]+AA[3]+AA[4]+AA[5]+AA[6]+AA[7]+AA[8]+AA[9]+AA[10]+AA[11]+AA[12];
+   if(  AACalculator00->Text==0){
+	  AACalculator00->Text="";
+   }
+   //--------------------------------------------------------------------------
+   //MA CALCULATOR
+	 int MA[20];
+   if(MA1->Text == ""){
+	  MA1->Text= 0;
+	  MA[1]=StrToInt(MA1->Text);
+	  MA1->Text= "";
+   }
+   else{
+		MA[1]=StrToInt(MA1->Text);
+   }
+
+   if(MA2->Text == ""){
+	  MA2->Text= 0;
+	  MA[2]=StrToInt(MA2->Text);
+	  MA2->Text= "";
+   }
+   else{
+		MA[2]=StrToInt(MA2->Text);
+   }
+   if(MA3->Text == ""){
+	  MA3->Text= 0;
+	  MA[3]=StrToInt(MA3->Text);
+	  MA3->Text= "";
+   }
+   else{
+		MA[3]=StrToInt(MA3->Text);
+   }
+   if(MA4->Text == ""){
+	  MA4->Text= 0;
+	  MA[4]=StrToInt(MA4->Text);
+	  MA4->Text= "";
+   }
+   else{
+		MA[4]=StrToInt(MA4->Text);
+   }
+   if(MA5->Text == ""){
+	  MA5->Text= 0;
+	  MA[5]=StrToInt(MA5->Text);
+	  MA5->Text= "";
+   }
+   else{
+		MA[5]=StrToInt(MA5->Text);
+   }
+   if(MA6->Text == ""){
+	  MA6->Text= 0;
+	  MA[6]=StrToInt(MA6->Text);
+	  MA6->Text= "";
+   }
+   else{
+		MA[6]=StrToInt(MA6->Text);
+   }
+   if(MA7->Text == ""){
+	  MA7->Text= 0;
+	  MA[7]=StrToInt(MA7->Text);
+	  MA7->Text= "";
+   }
+   else{
+		MA[7]=StrToInt(MA7->Text);
+   }
+   if(MA8->Text == ""){
+	  MA8->Text= 0;
+	  MA[8]=StrToInt(MA8->Text);
+	  MA8->Text= "";
+   }
+   else{
+		MA[8]=StrToInt(MA8->Text);
+   }
+   if(MA9->Text == ""){
+	  MA9->Text= 0;
+	  MA[9]=StrToInt(MA9->Text);
+	  MA9->Text= "";
+   }
+   else{
+		MA[9]=StrToInt(MA9->Text);
+   }
+   if(MA9->Text == ""){
+	  MA9->Text= 0;
+	  MA[9]=StrToInt(MA9->Text);
+	  MA9->Text= "";
+   }
+   else{
+		MA[9]=StrToInt(MA9->Text);
+   }
+   if(MA10->Text == ""){
+	  MA10->Text= 0;
+	  MA[10]=StrToInt(MA10->Text);
+	  MA10->Text= "";
+   }
+   else{
+		MA[10]=StrToInt(MA10->Text);
+   }
+   if(MA11->Text == ""){
+	  MA11->Text= 0;
+	  MA[11]=StrToInt(MA11->Text);
+	  MA11->Text= "";
+   }
+   else{
+		MA[11]=StrToInt(MA11->Text);
+   }
+
+   if(MA12->Text == ""){
+	  MA12->Text= 0;
+	  MA[12]=StrToInt(MA12->Text);
+	  MA12->Text= "";
+   }
+   else{
+		MA[12]=StrToInt(MA12->Text);
+   }
+   MACalculator00->Text=MA[1]+MA[2]+MA[3]+MA[4]+MA[5]+MA[6]+MA[7]+MA[8]+MA[9]+MA[10]+MA[11]+MA[12];
+   if(  MACalculator00->Text==0){
+	  MACalculator00->Text="";
+   }
+   GutMenge1->Text=GutCalculator00->Text;
+}
+
+//---------------------------------------------------------------------------
