@@ -1,0 +1,2328 @@
+object TBase: TTBase
+  Left = 0
+  Top = 0
+  Caption = 'SHB_Auftragsbleitschein_AlexProject'
+  ClientHeight = 918
+  ClientWidth = 1488
+  Position = Default
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ListView3: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 428.000000000000000000
+    Position.Y = 785.000000000000000000
+    Size.Width = 54.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 57
+  end
+  object ListView4: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 499.000000000000000000
+    Position.Y = 785.000000000000000000
+    Size.Width = 58.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 58
+  end
+  object ListView2: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 970.000000000000000000
+    Position.Y = 859.000000000000000000
+    Size.Width = 237.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 50
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 828.000000000000000000
+    Position.Y = 787.000000000000000000
+    Size.Width = 52.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 51
+  end
+  object Datum: TLabel
+    Align = Scale
+    Position.X = 201.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 40.000000000000000000
+    Size.Height = 16.034942626953130000
+    Size.PlatformDefault = False
+    Text = 'Datum'
+    TabOrder = 12
+    object StuckzahlAuftrag: TLabel
+      Align = Scale
+      AutoSize = True
+      Position.X = -161.000000000000000000
+      Position.Y = -51.111381530761720000
+      Size.Width = 106.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'St'#252'ckzahl Auftrag:'
+      TabOrder = 7
+    end
+    object LieferTermin: TLabel
+      Align = Scale
+      AutoSize = True
+      Position.X = 344.000000000000000000
+      Position.Y = -60.131034851074220000
+      Size.Width = 73.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Liefertermin:'
+      TabOrder = 6
+    end
+    object Kunde: TLabel
+      Align = Scale
+      AutoSize = True
+      Position.X = 837.000000000000000000
+      Position.Y = -88.192184448242190000
+      Size.Width = 49.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = '  Kunde:'
+      TabOrder = 5
+    end
+    object BestellNr: TLabel
+      Align = Scale
+      Position.X = 749.000000000000000000
+      Position.Y = -56.122299194335940000
+      Size.Width = 137.000000000000000000
+      Size.Height = 30.065517425537110000
+      Size.PlatformDefault = False
+      Text = 'Auftrags-Nr./Bestell-Nr.:'
+      TabOrder = 4
+    end
+  end
+  object ZeitVon: TLabel
+    Align = Scale
+    Position.X = 280.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 48.000000000000000000
+    Size.Height = 16.034942626953130000
+    Size.PlatformDefault = False
+    Text = 'Zeit von'
+    TabOrder = 11
+  end
+  object ZeitBis: TLabel
+    Align = Scale
+    Position.X = 353.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 48.000000000000000000
+    Size.Height = 16.034942626953130000
+    Size.PlatformDefault = False
+    Text = 'Zeit bis'
+    TabOrder = 10
+    object Pause: TLabel
+      Align = Scale
+      Position.X = 75.000000000000000000
+      Position.Y = -24.052413940429690000
+      Size.Width = 54.000000000000000000
+      Size.Height = 56.122299194335940000
+      Size.PlatformDefault = False
+      Text = 'Pause Minuten'
+      TabOrder = 0
+      object StundenGesamt: TLabel
+        Align = Scale
+        Position.X = 79.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 56.122299194335940000
+        Size.PlatformDefault = False
+        Text = 'Stunden Gesamt'
+        TabOrder = 0
+        object Maschine: TLabel
+          Align = Scale
+          Position.X = 91.999984741210940000
+          Position.Y = 16.034942626953130000
+          Size.Width = 68.999984741210940000
+          Size.Height = 40.087356567382810000
+          Size.PlatformDefault = False
+          Text = 'Maschine'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object AA: TLabel
+    Align = Scale
+    Position.X = 907.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 20.043670654296880000
+    Size.PlatformDefault = False
+    Text = 'AA'
+    TabOrder = 9
+  end
+  object MA: TLabel
+    Align = Scale
+    Position.X = 967.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 26.000000000000000000
+    Size.Height = 20.043670654296880000
+    Size.PlatformDefault = False
+    Text = 'MA'
+    TabOrder = 7
+  end
+  object Messungen: TLabel
+    Align = Scale
+    Position.X = 1056.000000000000000000
+    Position.Y = 123.268569946289100000
+    Size.Width = 48.000000000000000000
+    Size.Height = 47.102615356445310000
+    Size.PlatformDefault = False
+    Text = 'Mes- sugen?'
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    Align = Scale
+    Position.X = 695.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 20.043670654296880000
+    Size.PlatformDefault = False
+    Text = 'Arbeitsgang AFO'
+    TabOrder = 5
+  end
+  object Name1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 27
+    Position.X = 40.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object StuckzahlAuftrag1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 28
+      Position.X = 114.000000000000000000
+      Position.Y = -88.192138671875000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 25.054580688476560000
+      Size.PlatformDefault = False
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 29
+        Position.Y = -120.261978149414100000
+        Size.Width = 183.000000000000000000
+        Size.Height = 25.054580688476560000
+        Size.PlatformDefault = False
+      end
+      object Bezeichnung1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 28
+        Position.X = -1.000000000000000000
+        Position.Y = -32.069862365722660000
+        Size.Width = 183.000000000000000000
+        Size.Height = 25.054580688476560000
+        Size.PlatformDefault = False
+        object Edit6: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 30
+          Position.Y = -120.261978149414100000
+          Size.Width = 183.000000000000000000
+          Size.Height = 25.054580688476560000
+          Size.PlatformDefault = False
+        end
+        object Edit7: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 29
+          Position.Y = -112.244522094726600000
+          Size.Width = 183.000000000000000000
+          Size.Height = 25.054580688476560000
+          Size.PlatformDefault = False
+        end
+        object TeileNummer1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 28
+          Position.X = 473.000061035156300000
+          Size.Width = 183.000061035156300000
+          Size.Height = 25.054580688476560000
+          Size.PlatformDefault = False
+          object Edit4: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 30
+            Position.Y = -120.261978149414100000
+            Size.Width = 183.000091552734400000
+            Size.Height = 25.054580688476560000
+            Size.PlatformDefault = False
+          end
+          object Edit5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 29
+            Position.Y = -112.244522094726600000
+            Size.Width = 183.000091552734400000
+            Size.Height = 25.054580688476560000
+            Size.PlatformDefault = False
+          end
+          object LieferTermin1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 28
+            Position.Y = 33.072044372558590000
+            Size.Width = 183.000091552734400000
+            Size.Height = 25.054580688476560000
+            Size.PlatformDefault = False
+          end
+        end
+      end
+    end
+  end
+  object Button1: TButton
+    Align = Scale
+    Position.X = 1215.000000000000000000
+    Position.Y = 834.818847656250000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 48.104858398437500000
+    Size.PlatformDefault = False
+    TabOrder = 28
+    Text = 'Save File'
+    OnClick = Button1Click
+  end
+  object Name2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 25
+    Position.X = 40.000000000000000000
+    Position.Y = 225.491271972656300000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 24
+    Position.X = 40.000000000000000000
+    Position.Y = 273.596069335937500000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name4: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 23
+    Position.X = 40.000000000000000000
+    Position.Y = 321.700866699218800000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name5: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 22
+    Position.X = 40.000000000000000000
+    Position.Y = 369.805664062500000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name6: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 21
+    Position.X = 40.000000000000000000
+    Position.Y = 417.910522460937500000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name7: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 20
+    Position.X = 40.000000000000000000
+    Position.Y = 466.015319824218800000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name8: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 19
+    Position.X = 40.000000000000000000
+    Position.Y = 514.120117187500000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name9: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 18
+    Position.X = 40.000000000000000000
+    Position.Y = 562.224853515625000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name10: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 17
+    Position.X = 40.000000000000000000
+    Position.Y = 610.329711914062500000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087280273437500000
+    Size.PlatformDefault = False
+  end
+  object Name11: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 16
+    Position.X = 40.000000000000000000
+    Position.Y = 658.434570312500000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Name12: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 15
+    Position.X = 40.000000000000000000
+    Position.Y = 706.539306640625000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Align = Scale
+    AutoSize = True
+    ControlType = Platform
+    Position.X = 40.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 140.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'Label1Style1'
+    Text = 'Name Mitarbeiter'
+    TabOrder = 3
+  end
+  object Datum1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 41
+    Position.X = 201.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 56.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Datum2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 40
+    Position.X = 201.000000000000000000
+    Position.Y = 225.491271972656300000
+    Size.Width = 56.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Datum3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 39
+    Position.X = 201.000000000000000000
+    Position.Y = 273.596069335937500000
+    Size.Width = 56.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Datum4: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 38
+    Position.X = 201.000000000000000000
+    Position.Y = 321.700866699218800000
+    Size.Width = 56.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Datum5: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 25
+      Position.Y = 48.104804992675780000
+      Size.Width = 56.000000000000000000
+      Size.Height = 41.089530944824220000
+      Size.PlatformDefault = False
+      object Datum6: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 25
+        Position.Y = 49.107002258300780000
+        Size.Width = 56.000000000000000000
+        Size.Height = 40.087348937988280000
+        Size.PlatformDefault = False
+        object Datum7: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 25
+          Position.Y = 48.104812622070310000
+          Size.Width = 56.000000000000000000
+          Size.Height = 40.087356567382810000
+          Size.PlatformDefault = False
+          object Datum8: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 25
+            Position.Y = 46.931541442871090000
+            Size.Width = 56.000000000000000000
+            Size.Height = 40.087364196777340000
+            Size.PlatformDefault = False
+            object Datum9: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 25
+              Position.Y = 47.102653503417970000
+              Size.Width = 56.000000000000000000
+              Size.Height = 42.091743469238280000
+              Size.PlatformDefault = False
+              object Datum10: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 25
+                Position.Y = 50.109222412109380000
+                Size.Width = 56.000000000000000000
+                Size.Height = 39.085189819335940000
+                Size.PlatformDefault = False
+                object Datum11: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 25
+                  Position.Y = 48.104850769042970000
+                  Size.Width = 56.000000000000000000
+                  Size.Height = 41.089561462402340000
+                  Size.PlatformDefault = False
+                  object Datum12: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 25
+                    Position.Y = 48.104850769042970000
+                    Size.Width = 56.000000000000000000
+                    Size.Height = 41.089561462402340000
+                    Size.PlatformDefault = False
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object ZeitV1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 37
+    Position.X = 280.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object ZeitV1q: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 40
+      Position.X = 32.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 40.087337493896480000
+      Size.PlatformDefault = False
+      object ZeitB1q: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 40
+        Position.X = 72.000000000000000000
+        Size.Width = 36.000000000000000000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+        object ZeitB2q: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 40
+          Position.Y = 48.104804992675780000
+          Size.Width = 36.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+  end
+  object ZeitV2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 29
+    Position.X = 280.000000000000000000
+    Position.Y = 225.491271972656300000
+    Size.Width = 33.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object ZeitV3: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 25
+      Position.Y = 48.104804992675780000
+      Size.Width = 33.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object ZeitV4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 26
+        Position.Y = 48.104804992675780000
+        Size.Width = 33.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object ZeitV5: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 25
+          Position.Y = 48.104804992675780000
+          Size.Width = 33.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object ZeitV6: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 25
+            Position.Y = 48.104804992675780000
+            Size.Width = 33.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object ZeitV7: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 25
+              Position.Y = 48.104804992675780000
+              Size.Width = 33.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object ZeitV8: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 25
+                Position.Y = 48.104804992675780000
+                Size.Width = 33.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object ZeitV9: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 25
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 33.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object ZeitV10: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 25
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 33.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object ZeitV11: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 25
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 33.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object ZeitV12: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 25
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 33.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+      object ZeitB3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 25
+        Position.X = 73.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+        object ZeitB4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 25
+          Position.Y = 48.104804992675780000
+          Size.Width = 33.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object ZeitB5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 25
+            Position.Y = 48.104804992675780000
+            Size.Width = 33.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object ZeitB6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 25
+              Position.Y = 48.104804992675780000
+              Size.Width = 33.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object ZeitB7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 25
+                Position.Y = 48.104804992675780000
+                Size.Width = 33.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object ZeitB8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 25
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 33.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object ZeitB9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 25
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 33.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object ZeitB10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 25
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 33.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object ZeitB11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 25
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 33.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object ZeitB12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 25
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 33.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    object ZeitV2q: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 31
+      Position.X = 32.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 40.087337493896480000
+      Size.PlatformDefault = False
+      object ZeitV3q: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 25
+        Position.Y = 48.104804992675780000
+        Size.Width = 33.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object ZeitV4q: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 26
+          Position.Y = 48.104804992675780000
+          Size.Width = 33.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object ZeitV5q: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 25
+            Position.Y = 48.104804992675780000
+            Size.Width = 33.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object ZeitV6q: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 25
+              Position.Y = 48.104804992675780000
+              Size.Width = 33.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object ZeitV7q: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 25
+                Position.Y = 48.104804992675780000
+                Size.Width = 33.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object ZeitV8q: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 25
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 33.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object ZeitV9q: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 25
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 33.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object ZeitV10q: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 25
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 33.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object ZeitV11q: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 25
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 33.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object ZeitV12q: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 25
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 33.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+        object ZeitB3q: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 25
+          Position.X = 72.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 40.087337493896480000
+          Size.PlatformDefault = False
+          object ZeitB4q: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 25
+            Position.Y = 48.104804992675780000
+            Size.Width = 36.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object ZeitB5q: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 25
+              Position.Y = 48.104804992675780000
+              Size.Width = 36.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object ZeitB6q: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 25
+                Position.Y = 48.104804992675780000
+                Size.Width = 36.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object ZeitB7q: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 25
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 36.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object ZeitB8q: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 25
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 36.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object ZeitB9q: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 25
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 36.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object ZeitB10q: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 25
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 36.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object ZeitB11q: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 25
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 36.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                          object ZeitB12q: TEdit
+                            Touch.InteractiveGestures = [LongTap, DoubleTap]
+                            Align = Scale
+                            TabOrder = 25
+                            Position.Y = 48.104804992675780000
+                            Size.Width = 36.000000000000000000
+                            Size.Height = 40.087333679199220000
+                            Size.PlatformDefault = False
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Primo: TLabel
+    Align = Scale
+    Position.X = 22.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    Text = '1.'
+    TabOrder = 47
+  end
+  object Idk: TLabel
+    Align = Scale
+    Position.X = 880.000000000000000000
+    Position.Y = 859.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'LabelDatumStyle1'
+    Text = 'Last saved file: '
+    TabOrder = 14
+    object GutMenge: TLabel
+      Align = Scale
+      Position.X = 1086.000000000000000000
+      Position.Y = -48.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'LabelDatumStyle1'
+      Text = 'Gut-Menge:'
+      TabOrder = 4
+    end
+  end
+  object oldNameFile: TLabel
+    Align = Scale
+    Position.X = 969.000000000000000000
+    Position.Y = 859.000000000000000000
+    Size.Width = 238.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'LabelDatumStyle1'
+    TabOrder = 13
+  end
+  object ZeitB1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 36
+    Position.X = 353.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 32.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object ZeitB2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 35
+    Position.X = 353.000000000000000000
+    Position.Y = 225.491271972656300000
+    Size.Width = 32.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+  end
+  object Pause1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 34
+    Position.X = 428.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 54.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Pause2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 32
+      Position.Y = 48.104804992675780000
+      Size.Width = 54.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object Pause3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 32
+        Position.Y = 48.104804992675780000
+        Size.Width = 54.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object Pause4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 32
+          Position.Y = 48.104804992675780000
+          Size.Width = 54.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object Pause5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 32
+            Position.Y = 48.104804992675780000
+            Size.Width = 54.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object Pause6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 32
+              Position.Y = 48.104804992675780000
+              Size.Width = 54.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object Pause7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 32
+                Position.Y = 48.104804992675780000
+                Size.Width = 54.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object Pause8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 32
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 54.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object Pause9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 32
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 54.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object Pause10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 32
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 54.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object Pause11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 32
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 54.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object Pause12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 32
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 54.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Stunden1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 33
+    Position.X = 499.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 56.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Gut1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 27
+      Position.X = 329.000000000000000000
+      Size.Width = 56.000000000000000000
+      Size.Height = 40.087337493896480000
+      Size.PlatformDefault = False
+      object AA1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 27
+        Position.X = 71.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+      end
+    end
+    object Stunden2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 31
+      Position.Y = 48.104804992675780000
+      Size.Width = 56.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object Gut2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 27
+        Position.X = 329.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+        object AA2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 27
+          Position.X = 71.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 40.087337493896480000
+          Size.PlatformDefault = False
+        end
+      end
+      object Stunden3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 31
+        Position.Y = 48.104804992675780000
+        Size.Width = 56.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object Gut3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 27
+          Position.X = 329.000000000000000000
+          Size.Width = 56.000000000000000000
+          Size.Height = 40.087337493896480000
+          Size.PlatformDefault = False
+          object AA3: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 27
+            Position.X = 71.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 40.087337493896480000
+            Size.PlatformDefault = False
+          end
+        end
+        object Stunden4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 31
+          Position.Y = 48.104804992675780000
+          Size.Width = 56.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object Gut4: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 27
+            Position.X = 329.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 40.087337493896480000
+            Size.PlatformDefault = False
+            object AA4: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 27
+              Position.X = 71.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 40.087337493896480000
+              Size.PlatformDefault = False
+            end
+          end
+          object Stunden5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 31
+            Position.Y = 48.104804992675780000
+            Size.Width = 56.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object Gut5: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 27
+              Position.X = 329.000000000000000000
+              Size.Width = 56.000000000000000000
+              Size.Height = 40.087337493896480000
+              Size.PlatformDefault = False
+              object AA5: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 27
+                Position.X = 71.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 40.087337493896480000
+                Size.PlatformDefault = False
+              end
+            end
+            object Stunden6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 31
+              Position.Y = 48.104804992675780000
+              Size.Width = 56.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object Gut6: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 27
+                Position.X = 329.000000000000000000
+                Size.Width = 56.000000000000000000
+                Size.Height = 40.087337493896480000
+                Size.PlatformDefault = False
+                object AA6: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 27
+                  Position.X = 71.000000000000000000
+                  Size.Width = 48.000000000000000000
+                  Size.Height = 40.087337493896480000
+                  Size.PlatformDefault = False
+                end
+              end
+              object Stunden7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 31
+                Position.Y = 48.104804992675780000
+                Size.Width = 56.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object Gut7: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 27
+                  Position.X = 329.000000000000000000
+                  Size.Width = 56.000000000000000000
+                  Size.Height = 40.087337493896480000
+                  Size.PlatformDefault = False
+                  object AA7: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 27
+                    Position.X = 71.000000000000000000
+                    Size.Width = 48.000000000000000000
+                    Size.Height = 40.087337493896480000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object Stunden8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 31
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 56.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object Gut8: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 27
+                    Position.X = 329.000000000000000000
+                    Size.Width = 56.000000000000000000
+                    Size.Height = 40.087337493896480000
+                    Size.PlatformDefault = False
+                    object AA8: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 27
+                      Position.X = 71.000000000000000000
+                      Size.Width = 48.000000000000000000
+                      Size.Height = 40.087337493896480000
+                      Size.PlatformDefault = False
+                    end
+                  end
+                  object Stunden9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 31
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 56.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object Gut9: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 27
+                      Position.X = 329.000000000000000000
+                      Size.Width = 56.000000000000000000
+                      Size.Height = 40.087337493896480000
+                      Size.PlatformDefault = False
+                      object AA9: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 27
+                        Position.X = 71.000000000000000000
+                        Size.Width = 48.000000000000000000
+                        Size.Height = 40.087337493896480000
+                        Size.PlatformDefault = False
+                      end
+                    end
+                    object Stunden10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 31
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 56.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object Gut10: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 27
+                        Position.X = 329.000000000000000000
+                        Size.Width = 56.000000000000000000
+                        Size.Height = 40.087337493896480000
+                        Size.PlatformDefault = False
+                        object AA10: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 27
+                          Position.X = 71.000000000000000000
+                          Size.Width = 48.000000000000000000
+                          Size.Height = 40.087337493896480000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                      object Stunden11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 31
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 56.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object Gut11: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 27
+                          Position.X = 329.000000000000000000
+                          Size.Width = 56.000000000000000000
+                          Size.Height = 40.087337493896480000
+                          Size.PlatformDefault = False
+                          object AA11: TEdit
+                            Touch.InteractiveGestures = [LongTap, DoubleTap]
+                            Align = Scale
+                            TabOrder = 27
+                            Position.X = 71.000000000000000000
+                            Size.Width = 48.000000000000000000
+                            Size.Height = 40.087337493896480000
+                            Size.PlatformDefault = False
+                          end
+                        end
+                        object Stunden12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 31
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 56.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                          object Gut12: TEdit
+                            Touch.InteractiveGestures = [LongTap, DoubleTap]
+                            Align = Scale
+                            TabOrder = 27
+                            Position.X = 329.000000000000000000
+                            Size.Width = 56.000000000000000000
+                            Size.Height = 40.087337493896480000
+                            Size.PlatformDefault = False
+                            object AA12: TEdit
+                              Touch.InteractiveGestures = [LongTap, DoubleTap]
+                              Align = Scale
+                              TabOrder = 27
+                              Position.X = 71.000000000000000000
+                              Size.Width = 48.000000000000000000
+                              Size.Height = 40.087337493896480000
+                              Size.PlatformDefault = False
+                            end
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Maschine1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 32
+    Position.X = 573.000000000000000000
+    Position.Y = 177.386474609375000000
+    Size.Width = 114.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Maschine2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 30
+      Position.Y = 48.104804992675780000
+      Size.Width = 114.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object Maschine3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 30
+        Position.Y = 48.104804992675780000
+        Size.Width = 114.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object Maschine4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 30
+          Position.Y = 48.104804992675780000
+          Size.Width = 114.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object Maschine5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 30
+            Position.Y = 48.104804992675780000
+            Size.Width = 114.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object Maschine6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 30
+              Position.Y = 48.104804992675780000
+              Size.Width = 114.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object Maschine7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 30
+                Position.Y = 48.104804992675780000
+                Size.Width = 114.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object Maschine8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 30
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 114.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object Maschine9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 30
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 114.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object Maschine10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 30
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 114.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object Maschine11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 30
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 114.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object Maschine12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 30
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 114.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Arbeitsgang1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 31
+    Position.X = 695.000000000000000000
+    Position.Y = 178.388641357421900000
+    Size.Width = 114.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Bem1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 27
+      Position.X = 431.999969482421900000
+      Position.Y = -1.002183437347412000
+      Size.Width = 192.999969482421900000
+      Size.Height = 40.087337493896480000
+      Size.PlatformDefault = False
+      object BestellNr1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 27
+        Position.X = -31.999994277954100000
+        Position.Y = -88.192138671875000000
+        Size.Width = 224.999954223632800000
+        Size.Height = 26.056770324707030000
+        Size.PlatformDefault = False
+        object Kunde1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 27
+          Position.Y = -32.069869995117190000
+          Size.Width = 224.999954223632800000
+          Size.Height = 25.054584503173830000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object Arbeitsgang2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 29
+      Position.Y = 48.104804992675780000
+      Size.Width = 114.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object Bem2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 27
+        Position.X = 431.999969482421900000
+        Position.Y = -1.002183437347412000
+        Size.Width = 192.999969482421900000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+      end
+      object Arbeitsgang3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 29
+        Position.Y = 48.104804992675780000
+        Size.Width = 114.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object Bem3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 27
+          Position.X = 431.999969482421900000
+          Position.Y = -1.002183437347412000
+          Size.Width = 192.999969482421900000
+          Size.Height = 40.087337493896480000
+          Size.PlatformDefault = False
+        end
+        object Arbeitsgang4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 29
+          Position.Y = 48.104804992675780000
+          Size.Width = 114.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object Bem4: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 27
+            Position.X = 431.999969482421900000
+            Position.Y = -1.002183437347412000
+            Size.Width = 192.999969482421900000
+            Size.Height = 40.087337493896480000
+            Size.PlatformDefault = False
+          end
+          object Arbeitsgang5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 29
+            Position.Y = 48.104804992675780000
+            Size.Width = 114.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object Bem5: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 27
+              Position.X = 431.999969482421900000
+              Position.Y = -1.002183437347412000
+              Size.Width = 192.999969482421900000
+              Size.Height = 40.087337493896480000
+              Size.PlatformDefault = False
+            end
+            object Arbeitsgang6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 29
+              Position.Y = 48.104804992675780000
+              Size.Width = 114.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object Bem6: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 27
+                Position.X = 431.999969482421900000
+                Position.Y = -1.002183437347412000
+                Size.Width = 192.999969482421900000
+                Size.Height = 40.087337493896480000
+                Size.PlatformDefault = False
+              end
+              object Arbeitsgang7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 29
+                Position.Y = 48.104804992675780000
+                Size.Width = 114.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object Bem7: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 27
+                  Position.X = 431.999969482421900000
+                  Position.Y = -1.002183437347412000
+                  Size.Width = 192.999969482421900000
+                  Size.Height = 40.087337493896480000
+                  Size.PlatformDefault = False
+                end
+                object Arbeitsgang8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 29
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 114.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object Bem8: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 27
+                    Position.X = 431.999969482421900000
+                    Position.Y = -1.002183437347412000
+                    Size.Width = 192.999969482421900000
+                    Size.Height = 40.087337493896480000
+                    Size.PlatformDefault = False
+                  end
+                  object Arbeitsgang9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 29
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 114.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object Bem9: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 27
+                      Position.X = 431.999969482421900000
+                      Position.Y = -1.002183437347412000
+                      Size.Width = 192.999969482421900000
+                      Size.Height = 40.087337493896480000
+                      Size.PlatformDefault = False
+                    end
+                    object Arbeitsgang10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 29
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 114.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object Bem10: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 27
+                        Position.X = 431.999969482421900000
+                        Position.Y = -1.002183437347412000
+                        Size.Width = 192.999969482421900000
+                        Size.Height = 40.087337493896480000
+                        Size.PlatformDefault = False
+                      end
+                      object Arbeitsgang11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 29
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 114.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object Bem11: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 27
+                          Position.X = 431.999969482421900000
+                          Position.Y = -1.002183437347412000
+                          Size.Width = 192.999969482421900000
+                          Size.Height = 40.087337493896480000
+                          Size.PlatformDefault = False
+                        end
+                        object Arbeitsgang12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 29
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 114.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                          object Bem12: TEdit
+                            Touch.InteractiveGestures = [LongTap, DoubleTap]
+                            Align = Scale
+                            TabOrder = 27
+                            Position.X = 431.999969482421900000
+                            Position.Y = -1.002183437347412000
+                            Size.Width = 192.999969482421900000
+                            Size.Height = 40.087337493896480000
+                            Size.PlatformDefault = False
+                            object GutMenge1: TEdit
+                              Touch.InteractiveGestures = [LongTap, DoubleTap]
+                              Align = Scale
+                              TabOrder = 27
+                              Position.X = 87.999984741210940000
+                              Position.Y = 80.174674987792970000
+                              Size.Width = 104.999984741210900000
+                              Size.Height = 33.072052001953130000
+                              Size.PlatformDefault = False
+                            end
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object MA1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 30
+    Position.X = 967.000000000000000000
+    Position.Y = 178.388641357421900000
+    Size.Width = 50.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    object Mes1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 27
+      Position.X = 74.000000000000000000
+      Size.Width = 63.000000000000000000
+      Size.Height = 40.087337493896480000
+      Size.PlatformDefault = False
+    end
+    object MA2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Scale
+      TabOrder = 28
+      Position.Y = 48.104804992675780000
+      Size.Width = 50.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      object Mes2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 27
+        Position.X = 74.000000000000000000
+        Size.Width = 63.000000000000000000
+        Size.Height = 40.087337493896480000
+        Size.PlatformDefault = False
+      end
+      object MA3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        TabOrder = 28
+        Position.Y = 48.104804992675780000
+        Size.Width = 50.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        object Mes3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 27
+          Position.X = 74.000000000000000000
+          Size.Width = 63.000000000000000000
+          Size.Height = 40.087337493896480000
+          Size.PlatformDefault = False
+        end
+        object MA4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Scale
+          TabOrder = 28
+          Position.Y = 48.104804992675780000
+          Size.Width = 50.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          object Mes4: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 27
+            Position.X = 74.000000000000000000
+            Size.Width = 63.000000000000000000
+            Size.Height = 40.087337493896480000
+            Size.PlatformDefault = False
+          end
+          object MA5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Scale
+            TabOrder = 28
+            Position.Y = 48.104804992675780000
+            Size.Width = 50.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            object Mes5: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 27
+              Position.X = 74.000000000000000000
+              Size.Width = 63.000000000000000000
+              Size.Height = 40.087337493896480000
+              Size.PlatformDefault = False
+            end
+            object MA6: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Scale
+              TabOrder = 28
+              Position.Y = 48.104804992675780000
+              Size.Width = 50.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              object Mes6: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 27
+                Position.X = 74.000000000000000000
+                Size.Width = 63.000000000000000000
+                Size.Height = 40.087337493896480000
+                Size.PlatformDefault = False
+              end
+              object MA7: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Scale
+                TabOrder = 28
+                Position.Y = 48.104804992675780000
+                Size.Width = 50.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                object Mes7: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 27
+                  Position.X = 74.000000000000000000
+                  Size.Width = 63.000000000000000000
+                  Size.Height = 40.087337493896480000
+                  Size.PlatformDefault = False
+                end
+                object MA8: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Scale
+                  TabOrder = 28
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  object Mes8: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 27
+                    Position.X = 74.000000000000000000
+                    Size.Width = 63.000000000000000000
+                    Size.Height = 40.087337493896480000
+                    Size.PlatformDefault = False
+                  end
+                  object MA9: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Scale
+                    TabOrder = 28
+                    Position.Y = 48.104804992675780000
+                    Size.Width = 50.000000000000000000
+                    Size.Height = 40.087333679199220000
+                    Size.PlatformDefault = False
+                    object Mes9: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 27
+                      Position.X = 74.000000000000000000
+                      Size.Width = 63.000000000000000000
+                      Size.Height = 40.087337493896480000
+                      Size.PlatformDefault = False
+                    end
+                    object MA10: TEdit
+                      Touch.InteractiveGestures = [LongTap, DoubleTap]
+                      Align = Scale
+                      TabOrder = 28
+                      Position.Y = 48.104804992675780000
+                      Size.Width = 50.000000000000000000
+                      Size.Height = 40.087333679199220000
+                      Size.PlatformDefault = False
+                      object Mes10: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 27
+                        Position.X = 74.000000000000000000
+                        Size.Width = 63.000000000000000000
+                        Size.Height = 40.087337493896480000
+                        Size.PlatformDefault = False
+                      end
+                      object MA11: TEdit
+                        Touch.InteractiveGestures = [LongTap, DoubleTap]
+                        Align = Scale
+                        TabOrder = 28
+                        Position.Y = 48.104804992675780000
+                        Size.Width = 50.000000000000000000
+                        Size.Height = 40.087333679199220000
+                        Size.PlatformDefault = False
+                        object Mes11: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 27
+                          Position.X = 74.000000000000000000
+                          Size.Width = 63.000000000000000000
+                          Size.Height = 40.087337493896480000
+                          Size.PlatformDefault = False
+                        end
+                        object MA12: TEdit
+                          Touch.InteractiveGestures = [LongTap, DoubleTap]
+                          Align = Scale
+                          TabOrder = 28
+                          Position.Y = 48.104804992675780000
+                          Size.Width = 50.000000000000000000
+                          Size.Height = 40.087333679199220000
+                          Size.PlatformDefault = False
+                          object Mes12: TEdit
+                            Touch.InteractiveGestures = [LongTap, DoubleTap]
+                            Align = Scale
+                            TabOrder = 27
+                            Position.X = 74.000000000000000000
+                            Size.Width = 63.000000000000000000
+                            Size.Height = 40.087337493896480000
+                            Size.PlatformDefault = False
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Label2: TLabel
+    Align = Scale
+    Position.X = 832.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 16.034942626953130000
+    Size.PlatformDefault = False
+    Text = 'Gut'
+    TabOrder = 8
+  end
+  object Label4: TLabel
+    Align = Scale
+    Position.X = 1127.000000000000000000
+    Position.Y = 141.307861328125000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 20.043670654296880000
+    Size.PlatformDefault = False
+    Text = 'Bemerkung'
+    TabOrder = 4
+  end
+  object Label5: TLabel
+    Align = Scale
+    Position.X = 22.000000000000000000
+    Position.Y = 225.491271972656300000
+    Size.Width = 19.000000000000000000
+    Size.Height = 34.074218750000000000
+    Size.PlatformDefault = False
+    Text = '2.'
+    TabOrder = 43
+  end
+  object Label7: TLabel
+    Align = Scale
+    Position.X = 22.000000000000000000
+    Position.Y = 273.596069335937500000
+    Size.Width = 19.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    Text = '3.'
+    TabOrder = 46
+  end
+  object Label8: TLabel
+    Align = Scale
+    Position.X = 22.000000000000000000
+    Position.Y = 321.700866699218800000
+    Size.Width = 19.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    Text = '4.'
+    TabOrder = 45
+  end
+  object Label9: TLabel
+    Align = Scale
+    Position.X = 22.000000000000000000
+    Position.Y = 369.805664062500000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 40.087341308593750000
+    Size.PlatformDefault = False
+    Text = '5.'
+    TabOrder = 44
+    object Label10: TLabel
+      Align = Scale
+      Position.Y = 48.104804992675780000
+      Size.Width = 19.000000000000000000
+      Size.Height = 40.087333679199220000
+      Size.PlatformDefault = False
+      Text = '6.'
+      TabOrder = 4
+      object Label11: TLabel
+        Align = Scale
+        Position.Y = 48.104804992675780000
+        Size.Width = 19.000000000000000000
+        Size.Height = 40.087333679199220000
+        Size.PlatformDefault = False
+        Text = '7.'
+        TabOrder = 4
+        object Label12: TLabel
+          Align = Scale
+          Position.Y = 48.104804992675780000
+          Size.Width = 19.000000000000000000
+          Size.Height = 40.087333679199220000
+          Size.PlatformDefault = False
+          Text = '8.'
+          TabOrder = 4
+          object Label13: TLabel
+            Align = Scale
+            Position.Y = 48.104804992675780000
+            Size.Width = 19.000000000000000000
+            Size.Height = 40.087333679199220000
+            Size.PlatformDefault = False
+            Text = '9.'
+            TabOrder = 4
+            object Label14: TLabel
+              Align = Scale
+              Position.X = -7.000000000000000000
+              Position.Y = 48.104804992675780000
+              Size.Width = 17.000000000000000000
+              Size.Height = 40.087333679199220000
+              Size.PlatformDefault = False
+              Text = '10.'
+              TabOrder = 4
+              object Label15: TLabel
+                Align = Scale
+                Position.Y = 48.104804992675780000
+                Size.Width = 17.000000000000000000
+                Size.Height = 40.087333679199220000
+                Size.PlatformDefault = False
+                Text = '11.'
+                TabOrder = 4
+                object Label16: TLabel
+                  Align = Scale
+                  Position.Y = 48.104804992675780000
+                  Size.Width = 17.000000000000000000
+                  Size.Height = 40.087333679199220000
+                  Size.PlatformDefault = False
+                  Text = '12.'
+                  TabOrder = 4
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Bezeichnung: TLabel
+    Align = Scale
+    AutoSize = True
+    ControlType = Platform
+    Position.X = 64.000000000000000000
+    Position.Y = 57.124458312988280000
+    Size.Width = 84.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'Label1Style1'
+    Text = 'Bezeichnung: '
+    TabOrder = 2
+  end
+  object TeileNummer: TLabel
+    Align = Scale
+    AutoSize = True
+    Position.X = 499.000000000000000000
+    Position.Y = 57.124458312988280000
+    Size.Width = 118.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'Label1Style1'
+    TextSettings.WordWrap = False
+    Text = 'Teile-/Zeichnungs-Nr: '
+    TabOrder = 0
+  end
+  object Label19: TLabel
+    Align = Scale
+    AutoSize = True
+    ControlType = Platform
+    Position.X = 8.000000000000000000
+    Position.Y = -33.072052001953130000
+    Size.Width = 140.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'Label1Style1'
+    Text = 'Name Mitarbeiter'
+    TabOrder = 1
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Scale
+    TabOrder = 26
+    Position.X = 129.000000000000000000
+    Position.Y = -112.244537353515600000
+    Size.Width = 184.000000000000000000
+    Size.Height = 25.054580688476560000
+    Size.PlatformDefault = False
+  end
+  object ButtonCalculator2: TButton
+    Align = Scale
+    Position.X = 712.000000000000000000
+    Position.Y = 786.713989257812500000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.072021484375000000
+    Size.PlatformDefault = False
+    TabOrder = 49
+    Text = 'Total Calculator:'
+    OnClick = ButtonCalculator2Click
+  end
+  object AACalculator1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 900.000000000000000000
+    Position.Y = 786.713989257812500000
+    Size.Width = 46.000000000000000000
+    Size.Height = 33.072021484375000000
+    Size.PlatformDefault = False
+    TabOrder = 52
+  end
+  object MACalculator1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Scale
+    Position.X = 967.000000000000000000
+    Position.Y = 786.713989257812500000
+    Size.Width = 50.000000000000000000
+    Size.Height = 32.069824218750000000
+    Size.PlatformDefault = False
+    TabOrder = 53
+  end
+  object GutCalculator00: TLabel
+    Align = Scale
+    Position.X = 832.000000000000000000
+    Position.Y = 786.000000000000000000
+    Size.Width = 44.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 54
+    object AACalculator00: TLabel
+      Align = Scale
+      Position.X = 71.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 43.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+    end
+    object MACalculator00: TLabel
+      Align = Scale
+      Position.X = 138.000000000000000000
+      Size.Width = 44.000007629394530000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+  end
+  object hoursButton: TButton
+    Align = Scale
+    Position.X = 344.000000000000000000
+    Position.Y = 786.000000000000000000
+    Size.Width = 76.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 48
+    Text = 'Total Hours:'
+    OnClick = ButtonCalculator2Click
+  end
+  object totalMinuts: TLabel
+    Align = Scale
+    Position.X = 445.000000000000000000
+    Position.Y = 786.000000000000000000
+    Size.Width = 37.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 59
+  end
+  object totH: TLabel
+    Align = Scale
+    Position.X = 507.000000000000000000
+    Position.Y = 787.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Text = '60'
+    TabOrder = 60
+  end
+  object punti: TLabel
+    Align = Scale
+    Position.X = 528.000000000000000000
+    Position.Y = 785.000000000000000000
+    Size.Width = 9.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    Text = ':'
+    TabOrder = 61
+  end
+  object totM: TLabel
+    Align = Scale
+    Position.X = 540.000000000000000000
+    Position.Y = 787.000000000000000000
+    Size.Width = 27.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Text = '35'
+    TabOrder = 62
+  end
+end
